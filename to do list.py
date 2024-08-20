@@ -99,7 +99,7 @@ class TaskManager:
         except:
             messagebox.showinfo('Error', 'No Task Selected. Cannot Delete.')
     def delete_all_tasks(self):
-        if messagebox.askyesno('Delete All', 'Are you sure?'):
+        if messagebox.askyesno('Delete All', 'Do you want to delete all tasks?'):
             self.tasks.clear()
             self.db.delete_all_tasks()
             self.update_listbox()
