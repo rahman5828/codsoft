@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 import sqlite3 as sql
-class TaskDatabase:
+class To_Do_List:
     def __init__(self, db_name='listOfTasks.db'):
         self.conn = sql.connect(db_name)
         self.cursor = self.conn.cursor()
@@ -26,7 +26,7 @@ class TaskDatabase:
         self.conn.close()
 class TaskManager:
     def __init__(self, root):
-        self.db = TaskDatabase()
+        self.db = To_Do_List()
         self.tasks = []
         root.title("To-Do List")
         root.geometry("665x400+550+250")
